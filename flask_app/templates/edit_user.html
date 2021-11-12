@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Update User</title>
+</head>
+<body class="container pt-3">
+    <h1>Update User Info</h1>
+    <form action="/users/{{ user.id }}/update" method="post">
+        <p class="mb-3 mt-3">
+            First Name:
+            <input type="text" class="form-control" id="pwd" name="first_name" value="{{user.first_name}}">
+        </p>
+        <p class="mb-3 mt-3">
+            Last Name:
+            <input type="text" class="form-control" id="pwd" name="last_name" value="{{user.last_name}}">
+        </p>
+        <p class="mb-3 mt-3">
+            Email:
+            <input type="email" class="form-control" id="pwd" name="email" value="{{user.email}}">
+        </p>
+        <button class="btn btn-secondary mt-3 mb-4">Update User</button>
+    </form>
+    <a href="/">Home</a>
+</body>
+</html>
